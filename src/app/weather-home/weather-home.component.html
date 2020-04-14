@@ -17,22 +17,21 @@
   <p class="p2">{{weather}}</p>
   
   <div class="params flex">
-    <p class="p-0">Umidade</p>
+    <div class="humidity">
+      <p class="p-0">Umidade</p>
+      <p>{{humidity}}</p>
+    </div>
     <div class="vertical-line"></div>
-    <p class="p-1">Vento</p>
+    <div class="wind">
+      <p class="p-1">Vento</p>
+      <p>{{wind}}</p>
+    </div>
   </div>
     
-    <div class="params1 flex">
-        <p>{{humidity}}</p>
-        <p>{{wind}}</p>
-    </div>
-    
-
     <div class="params2 flex">
         <p>Min: {{min_temp}}</p>
         <p>Máx: {{max_temp}}</p>
     </div>
-
 
 </div>
 

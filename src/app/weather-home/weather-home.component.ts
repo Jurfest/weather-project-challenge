@@ -13,7 +13,7 @@ export class WeatherHomeComponent implements OnInit {
 
   weather:string = "Calor"
 
-  temp:string = "12º"
+  temp:string = "12 º"
   max_temp: string = "32º"
   min_temp: string = "10º"
 
