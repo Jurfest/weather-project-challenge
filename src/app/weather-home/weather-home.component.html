@@ -1,18 +1,31 @@
 
-<h1>{{locale}}</h1>
+<nav>
+  <input type="text" name="search" placeholder="Buscar cidade">
+</nav>
 
-<h2>{{hour}} | {{weather}}</h2>
 
-<p style="font-size: 38px">{{temp}}</p>
+<div class="header">
+  <h1>{{locale}}</h1>
+  <h2>{{hour}} | {{weather}}</h2>
+</div>
 
-<p>{{weather}}</p>
 
-<div class="params"><p>Umidade</p>
-<p>{{humidity}}</p>
+<div class="weather-content">
 
-<div class="vertical-line"></div>
-
-<p>Vento</p>
-<p>{{wind}}</p>
+  <p style="font-size: 38px">{{temp}}</p>
+  
+  <p>{{weather}}</p>
+  
+  <div class="params"><p>Umidade</p>
+    <p>{{humidity}}</p>
+    
+    <div class="vertical-line"></div>
+    
+    <p>Vento</p>
+    <p>{{wind}}</p>
+    
+    <p>Min: {{min_temp}}</p>
+    <p>Máx: {{max_temp}}</p>
+  </div>
 </div>
 
