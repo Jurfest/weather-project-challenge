@@ -1,31 +1,34 @@
 <app-weather-search></app-weather-search>
 
 <div class="header">
-  <img src="../../assets/icons/wi-cloud.svg" alt="…">
-  <h1>{{locale}}</h1>
+  <div class="weather-icon"></div>
+  <div class="city">
+    <h1>{{locale}}</h1>
+  </div>
   <h2>{{hour}} | {{weather}}</h2>
 </div>
 
 
 <div class="weather-content">
-
-  <p class="p1">{{temp}}</p>
   
-  <p class="p2">{{weather}}</p>
+  <p class="temp_val">{{temp}}</p>
+  
+  <p class="weather_val">{{weather}}</p>
+  
   
   <div class="params flex">
     <div class="humidity">
-      <p class="p-0">Umidade</p>
+      <p>Umidade</p>
       <p>{{humidity}}</p>
     </div>
     <div class="vertical-line"></div>
     <div class="wind">
-      <p class="p-1">Vento</p>
+      <p>Vento</p>
       <p>{{wind}}</p>
     </div>
   </div>
     
-    <div class="params2 flex">
+    <div class="max_min_temp">
         <p>Min: {{min_temp}}</p>
         <p>Máx: {{max_temp}}</p>
     </div>
