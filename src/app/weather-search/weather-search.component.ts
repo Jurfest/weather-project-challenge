@@ -9,6 +9,9 @@ export class WeatherSearchComponent implements OnInit {
 
   constructor() { }
 
+  search(event){}
+
+
   ngOnInit(): void {
   }
 

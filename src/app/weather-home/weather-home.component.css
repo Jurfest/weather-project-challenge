@@ -23,16 +23,15 @@ h2 {
 .weather-icon {
     background-image: url("../../assets/images/sunny_day.png");
     background-size: 100%;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     margin-right: 200px;
 }
 
 .weather-content {
-    margin-top: 220px;
+    margin-top: 100px;
     width: 50%;
     margin-left: 100px;
-    
 }
 
 
@@ -61,15 +60,11 @@ h2 {
     display: flex;
 }
 
-.params{
-    /* background-color: rgba(0, 128, 128, 0.288); */
+.weather-parameters{
     justify-content: center;
     margin-right: 20px;
-    /* margin-left: 20px; */
-    /* justify-content: space-around; */
     padding: 0 20px 0 10px;
     justify-content: space-between;
-
 }
 
 .humidity p:first-child{
