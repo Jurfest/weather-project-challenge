@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherHomeComponent implements OnInit {
 
-  locale:string = "SÃO PAULO"
+  locale:string = "São Paulo"
   
-  hour:string = "MANHA"
+  hour:string = "Manha"
 
-  weather:string = "CALOR"
+  weather:string = "Calor"
 
   temp:string = "12º"
   max_temp: string = "32º"

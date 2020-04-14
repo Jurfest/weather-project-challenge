@@ -1,4 +1,3 @@
-
 <nav>
   <input type="text" name="search" placeholder="Buscar cidade">
 </nav>
@@ -12,20 +11,24 @@
 
 <div class="weather-content">
 
-  <p style="font-size: 38px">{{temp}}</p>
+  <p class="p1">{{temp}}</p>
   
-  <p>{{weather}}</p>
+  <p class="p2">{{weather}}</p>
   
-  <div class="params"><p>Umidade</p>
-    <p>{{humidity}}</p>
-    
+  <div class="params flex">
+    <p class="p-0">Umidade</p>
     <div class="vertical-line"></div>
-    
-    <p>Vento</p>
-    <p>{{wind}}</p>
-    
-    <p>Min: {{min_temp}}</p>
-    <p>Máx: {{max_temp}}</p>
+    <p class="p-1">Vento</p>
   </div>
+    
+    <div class="params1 flex">
+        <p>{{humidity}}</p>
+        <p>{{wind}}</p>
+    </div>
+    
+    <div class="params2 flex">
+        <p>Min: {{min_temp}}</p>
+        <p>Máx: {{max_temp}}</p>
+    </div>
 </div>
 
