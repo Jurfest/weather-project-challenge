@@ -29,11 +29,12 @@ export class WeatherSearchComponent implements OnInit {
         this.entries = Object.entries(weatherData.data);
         this.chaves = Object.keys(weatherData.data);
         this.valores = Object.values(weatherData.data);
+        console.log(this.entries)
+        console.log(this.chaves)
+        console.log(this.valores)
       }
     );
-    console.log(this.entries)
-    console.log(this.chaves)
-    console.log(this.valores)
+    
   }
 
 }
