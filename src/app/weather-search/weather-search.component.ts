@@ -10,12 +10,8 @@ export class WeatherSearchComponent implements OnInit {
 
   constructor(private apiservice: ApiService) { }
 
-  search(event){
-
-  }
-
   ngOnInit(): void {
-    this.callApi()
+    this.callApi("São Paulo")
   }
 
   entries:any;
@@ -23,23 +19,24 @@ export class WeatherSearchComponent implements OnInit {
   weatherValues:any;
   locale:any
   teste:any
-  callApi() {
+  callApi(event) {
     let weatherData;
-    this.apiservice.getData("Raleigh").subscribe(
+    let teste = event.target.value
+    console.log(teste)
+    this.apiservice.getData(teste).subscribe(
       (data) => {
         weatherData = new Object(data);
         this.locale = weatherData.data[0].city_name
         this.entries = weatherData.data[0].temp;
         this.weatherKeys = weatherData.data[0].wind_spd;
         this.weatherValues = weatherData.data[0].rh;
-        
         console.log(this.locale)
         console.log(this.entries)
         console.log(this.weatherKeys)
         console.log(this.weatherValues)
       }
-    );
+      );
+      
+    }
     
-  }
-
 }

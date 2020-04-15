@@ -7,7 +7,7 @@ export class ApiService {
   private apiurlbase = "http://api.weatherbit.io/v2.0/current";
   
   private cityComplement = "?city=";
-  private keyComplement = ",NC&key=cbf7ff9ea59249408e922b1d8762773d";
+  private keyComplement = "&key=cbf7ff9ea59249408e922b1d8762773d";
 
   constructor(private http: HttpClient) { }
   
