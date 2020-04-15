@@ -15,9 +15,9 @@ export class ApiService {
     // lang = [language](optional)
     // units = [units](optional)
     const headers = new HttpHeaders()
-    // .set('key', 'cbf7ff9ea59249408e922b1d8762773d')
     .set('content-type', 'application/json')
     .set('Access-Control-Allow-Origin', '*');
+    // .set('key', 'cbf7ff9ea59249408e922b1d8762773d')
     
     return this.http.get(this.apiurlbase + this.cityComplement + city + this.keyComplement, 
       { 'headers': headers })

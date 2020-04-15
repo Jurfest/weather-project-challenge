@@ -19,19 +19,19 @@ export class WeatherSearchComponent implements OnInit {
   }
 
   entries:any;
-  chaves:any;
-  valores:any;
+  weatherKeys:any;
+  weatherValues:any;
   callApi() {
     let weatherData;
     this.apiservice.getData("Raleigh").subscribe(
       (data) => {
         weatherData = new Object(data);
-        this.entries = Object.entries(weatherData.data);
-        this.chaves = Object.keys(weatherData.data);
-        this.valores = Object.values(weatherData.data);
+        this.entries = Object.entries(weatherData.data[0]);
+        this.weatherKeys = Object.keys(weatherData.data[0]);
+        this.weatherValues = Object.values(weatherData.data[0]);
         console.log(this.entries)
-        console.log(this.chaves)
-        console.log(this.valores)
+        console.log(this.weatherValues)
+        console.log(this.weatherKeys)
       }
     );
     
