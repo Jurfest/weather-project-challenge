@@ -9,7 +9,7 @@ import { WeatherSearchComponent } from '../weather-search/weather-search.compone
   styleUrls: ['./weather-home.component.css']
 })
 export class WeatherHomeComponent implements OnInit {
-
+  //@Input('weatherItem') item: WeatherItem;
   locale:string = "São Paulo"
   
   hour:string = "Manha"
@@ -23,7 +23,8 @@ export class WeatherHomeComponent implements OnInit {
   humidity:string = "67%"
 
   wind:string = "12 K/M"
-  
+
+  //obj = new WeatherObj();
   
   constructor(private apiservice: ApiService) { }
 

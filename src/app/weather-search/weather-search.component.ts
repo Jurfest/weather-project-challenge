@@ -52,10 +52,9 @@ ngOnInit(): void {
 }
 
   
-  onAddCity(event){
-      let city = event;
-      console.log(`city: ${city}`);
+  onAddCity(city){
       console.log(`event: ${event}`);
+      this.callApi(city);
     }
   }
   
