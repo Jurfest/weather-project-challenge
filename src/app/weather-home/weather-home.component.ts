@@ -25,8 +25,6 @@ export class WeatherHomeComponent implements OnInit {
   
   constructor(private apiservice: ApiService) { }
 
-
-
   ngOnInit(): void {
     this.callApi("São Paulo")
   }

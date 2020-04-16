@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-// OBS: chamada a api sendo feita somente em home e passando apenas valor do input entre componentes
+// TODO: separar em outro serviço, pois chamada a api sendo feita somente em 
+// home e passando apenas valor do input entre componentes
 
 @Component({
   selector: 'app-weather-search',
