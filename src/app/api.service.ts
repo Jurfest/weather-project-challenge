@@ -10,7 +10,7 @@ export class ApiService {
 
   // TODO: tipos podem ser string ou number - testar union
   // TODO: usar class e setar valores de tempo?
-  private weatherData: any[];
+  private cities: any[] = [];
   constructor(private http: HttpClient) { }
   
   getData(city) {
@@ -23,14 +23,21 @@ export class ApiService {
       { 'headers': headers })
   }
 
-  // TODO: melhorar tipagem
-  // TODO: na verdade por enquanto funciona como addWeatherData (so para testar)
-  setWeatherData(data:any){
-    // TODO: usar class e setar valores de tempo?
-    this.weatherData.push(data)
+  addCity(city){
+    this.cities.push(city);
   }
 
-  clearWeatherData(){
-    this.weatherData = [];
-  }
+  // TODO: melhorar tipagem
+  // TODO: na verdade por enquanto funciona como addWeatherData (so para testar)
+  // setWeatherData(data:any){
+  //   this.weatherData.push(data)
+  // }
+
+  // clearWeatherData(){
+  //   this.weatherData = [];
+  // }
+
+  // getWeatherData(){
+  //   return this.weatherData;
+  // }
 }
