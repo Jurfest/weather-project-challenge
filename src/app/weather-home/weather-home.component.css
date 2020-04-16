@@ -21,7 +21,7 @@ h2 {
 }
 
 .weather-icon {
-    background-image: url("../../assets/images/sunny_day.png");
+    background-image: url("../../assets/images/globes.svg");
     background-size: 100%;
     width: 300px;
     height: 300px;
