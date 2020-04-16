@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
   private apiurlbase = "http://api.weatherbit.io/v2.0/current";
   private cityComplement = "?city=";
