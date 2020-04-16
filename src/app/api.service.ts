@@ -23,26 +23,4 @@ export class ApiService {
       { 'headers': headers })
   }
 
-  addCity(city){
-    this.cities.push(city);
-  }
-
-  // TODO: passar cities sem usar essa função
-  getCity(){
-    return this.cities;
-  }
-
-  // TODO: melhorar tipagem
-  // TODO: na verdade por enquanto funciona como addWeatherData (so para testar)
-  // setWeatherData(data:any){
-  //   this.weatherData.push(data)
-  // }
-
-  // clearWeatherData(){
-  //   this.weatherData = [];
-  // }
-
-  // getWeatherData(){
-  //   return this.weatherData;
-  // }
 }

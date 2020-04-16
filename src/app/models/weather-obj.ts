@@ -1,12 +1,22 @@
 export class WeatherObj {
-    constructor(
-      public city_name: string,
-      public temp: number,
-      public wind:number,
-      public moisture:number,
-      public city_img?: string
-    ) {}
+  public city_name: string;
+  public temp: number;
+  public wind: number;
+  public moisture: number;
+  public city_img?: string;
+
+  constructor(city_name: string, temp: number, wind:number, moisture:number, city_img?: string) {
+    this.city_name = city_name;
+    this.temp = temp;
+    this.wind = wind;
+    this.moisture = moisture;
+    if(city_img){
+      this.city_img = city_img;
+    }
+  }
 }
+
+
 // locale:string = "São Paulo"
   
 //   hour:string = "Manha"
