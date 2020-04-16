@@ -5,10 +5,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ApiService {
   private apiurlbase = "http://api.weatherbit.io/v2.0/current";
-  
   private cityComplement = "?city=";
   private keyComplement = "&key=cbf7ff9ea59249408e922b1d8762773d";
 
+  // TODO: tipos podem ser string ou number - testar union
+  // TODO: usar class e setar valores de tempo?
+  private weatherData: any[];
   constructor(private http: HttpClient) { }
   
   getData(city) {
@@ -17,9 +19,18 @@ export class ApiService {
     const headers = new HttpHeaders()
     .set('content-type', 'application/json')
     .set('Access-Control-Allow-Origin', '*');
-    // .set('key', 'cbf7ff9ea59249408e922b1d8762773d')
-    
     return this.http.get(this.apiurlbase + this.cityComplement + city + this.keyComplement, 
       { 'headers': headers })
+  }
+
+  // TODO: melhorar tipagem
+  // TODO: na verdade por enquanto funciona como addWeatherData (so para testar)
+  setWeatherData(data:any){
+    // TODO: usar class e setar valores de tempo?
+    this.weatherData.push(data)
+  }
+
+  clearWeatherData(){
+    this.weatherData = [];
   }
 }
