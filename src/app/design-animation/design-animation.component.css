@@ -1,0 +1,69 @@
+#main_globe{
+  animation: globe 2s 2 linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#circle{
+  animation: circle 4s 1 linear;
+  transform-origin: initial;
+  transform-box: unset;
+}
+
+/* #Vector: s shape  */
+#Vector{
+  animation: curve_shape 2s 2 linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* #Vector_2: globe from the middle  */
+/* #Vector_2{
+  animation: globe 2s 2 linear;
+  transform-box: fill-box;
+} */
+
+/* #Vector_3: globe from below  */
+#Vector_3{
+  /* animation: globe 2s ease 1s 1 left; */
+  animation: globe 3s 1 ease 1s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* small faraway globe */
+#Vector_4{
+  animation: globe 4s 1 linear;
+  transform-origin: center;
+}
+
+
+
+@keyframes globe{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes circle{
+  from{
+    transform: rotateX(0deg);
+
+  }
+  to{
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes curve_shape {
+  from {
+    transform: rotateY(0deg);
+
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
