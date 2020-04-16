@@ -14,7 +14,7 @@ export class WeatherHomeComponent implements OnInit {
 
   weather:string = "Calor"
 
-  temp:string = "12 º"
+  temp:string = "12";
   max_temp: string = "32º"
   min_temp: string = "10º"
 
@@ -38,12 +38,11 @@ export class WeatherHomeComponent implements OnInit {
   // TODO: melhorar para union
   public weatherSelectData: any[] = [];
 
-  callApi(event) {
+  callApi(city) {
     // this.apiservice.clearWeatherData();
     let weatherData;
     // TODO: utilizar outro tipo de binding para simplificar acesso a variavel do input
-    let inputCity = event.target.value;
-    this.apiservice.getData(inputCity).subscribe(data => {
+    this.apiservice.getData(city).subscribe(data => {
       // weatherData = new Object(data);
       weatherData = data
       this.locale = weatherData.data[0].city_name;

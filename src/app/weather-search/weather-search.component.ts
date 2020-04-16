@@ -10,7 +10,7 @@ import { ApiService } from '../api.service';
 })
 export class WeatherSearchComponent implements OnInit {
 
-  // searchedCities: string[] = ["São Paulo"]
+  // searchedCities: string[] = [Atlanta, Rio de Janeiro, São Paulo, Curitiba, Lisboa, Roma, Londres, Paris, Bogotá -->]
   constructor(private apiservice: ApiService) { }
 
   ngOnInit(): void {
