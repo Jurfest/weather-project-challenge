@@ -59,6 +59,6 @@ export class WeatherHomeComponent implements OnInit {
       console.log(this.humidity)
       // this.apiservice.setWeatherData(this.weatherSelectData);
     });
-
   }
+
 }
