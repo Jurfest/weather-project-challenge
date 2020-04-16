@@ -17,7 +17,9 @@ export class WeatherSearchComponent implements OnInit {
   }
 
   onAddCity(event){
-    let city = event.target.value;
+    let city = event;
+    console.log(`city: ${city}`);
+    console.log(`event: ${event}`);
     this.apiservice.addCity(city);
   }
 }
