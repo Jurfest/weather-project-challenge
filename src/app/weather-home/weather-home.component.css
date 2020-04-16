@@ -1,3 +1,9 @@
+.container{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 .header {
     margin-top: 60px;
     display: flex;
@@ -99,3 +105,22 @@ h2 {
     color: white;
     font-weight: lighter;
 } */
+.preview{
+
+    width: 700px;
+    position:fixed;
+    margin:200px 0 0 1150px;
+}
+.preview img{
+    align-items: center;
+}
+.box{
+    float: left;
+    border-style: solid;
+    border-color: oldlace;
+    border-radius: 10%;
+    border-width: 2px;
+    text-align: center;
+    margin: 2px;
+    width: 130px;
+}
