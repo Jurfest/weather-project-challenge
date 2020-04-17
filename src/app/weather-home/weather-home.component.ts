@@ -11,20 +11,12 @@ import { WeatherObj } from '../models/weather-obj';
   styleUrls: ['./weather-home.component.css']
 })
 export class WeatherHomeComponent implements OnInit {
-  //@Input('weatherItem') item: WeatherItem;
   locale:string = "São Paulo"
-  
-  hour:string = "Manha"
-
+  hour:string = "Manhã"
   weather:string = "Calor"
-
-  temp:string = "12";
-  max_temp: string = "32º"
-  min_temp: string = "10º"
-
-  humidity:string = "67%"
-
-  wind:string = "12 K/M"
+  temp: string = "0 °";
+  humidity:string = "0%"
+  wind:string = "0 K/M"
   
   // searchedCities: string[] = [Atlanta, Rio de Janeiro, São Paulo, Curitiba, Lisboa, Roma, Londres, Paris, Bogotá -->]
   constructor(private _apiservice: ApiService, private _broadcastSearchService: BroadcastSearchService) { }
@@ -64,6 +56,9 @@ export class WeatherHomeComponent implements OnInit {
       humidity = weatherData.data[0].rh;
       const newItem = new WeatherObj(locale, temp, wind, humidity);
       this.locale = locale;
+      this.temp = String(temp) + " °";
+      this.humidity = String(humidity) + "%";
+      this.wind = String(wind) + "K/M"; // kilometro / min
       console.log(locale)
       console.log(temp)
       console.log(wind)
@@ -72,4 +67,10 @@ export class WeatherHomeComponent implements OnInit {
   }
 
 }
+// locale: string = "São Paulo"
+// hour: string = "Manha"
+// weather: string = "Calor"
+// temp: string = "12";
+// humidity: string = "67%"
+// wind: string = "12 K/M"
   
