@@ -11,13 +11,10 @@ export class ApiService {
   private keyComplement = "&key=cbf7ff9ea59249408e922b1d8762773d";
 
   // TODO: tipos podem ser string ou number - testar union
-  // TODO: usar class e setar valores de tempo?
-  private cities: any[] = [];
+  // private cities: any[] = [];
   constructor(private http: HttpClient) { }
   
-  getData(city) {
-    // lang = [language](optional)
-    // units = [units](optional)
+  getData(city:string) {
     const headers = new HttpHeaders()
     .set('content-type', 'application/json')
     .set('Access-Control-Allow-Origin', '*');
