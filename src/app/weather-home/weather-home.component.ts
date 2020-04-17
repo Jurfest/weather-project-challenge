@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service'; 
 import { BroadcastSearchService } from '../broadcast-search.service'
 
@@ -18,6 +18,7 @@ export class WeatherHomeComponent implements OnInit {
   temp: string = "0 °";
   humidity:string = "0%"
   wind:string = "0 K/M"
+  
 
   
   // searchedCities: string[] = [Atlanta, Rio de Janeiro, São Paulo, Curitiba, Lisboa, Roma, Londres, Paris, Bogotá -->]
@@ -50,6 +51,7 @@ export class WeatherHomeComponent implements OnInit {
     let temp;
     let wind;
     let humidity;
+    let date;
     // TODO: utilizar outro tipo de binding para simplificar acesso a variavel do input
     this._apiservice.getData(city).subscribe(data => {
       weatherData = data
@@ -57,7 +59,8 @@ export class WeatherHomeComponent implements OnInit {
       temp = weatherData.data[0].temp;
       wind = weatherData.data[0].wind_spd;
       humidity = weatherData.data[0].rh;
-      const newItem = new WeatherObj(locale, temp, wind, humidity);
+      date = weatherData.data[0].deteTime;
+      var newItem = new WeatherObj(locale, temp, wind, humidity);
       this.locale = locale;
       this.temp = String(temp) + " °";
       this.humidity = String(humidity) + "%";
@@ -66,6 +69,7 @@ export class WeatherHomeComponent implements OnInit {
       console.log(temp)
       console.log(wind)
       console.log(humidity)
+      console.log(newItem);
     });
   }
 
