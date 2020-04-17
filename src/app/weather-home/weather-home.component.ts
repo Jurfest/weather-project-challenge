@@ -10,6 +10,7 @@ import { WeatherObj } from '../models/weather-obj';
   templateUrl: './weather-home.component.html',
   styleUrls: ['./weather-home.component.css']
 })
+<<<<<<< HEAD
 export class WeatherHomeComponent implements OnInit {
   locale:string = "São Paulo"
   hour:string = "Manhã"
@@ -17,6 +18,21 @@ export class WeatherHomeComponent implements OnInit {
   temp: string = "0 °";
   humidity:string = "0%"
   wind:string = "0 K/M"
+=======
+export class WeatherHomeComponent  implements OnInit {
+  //@Input('weatherItem') item: WeatherItem;
+
+  
+  locale:string = "São Paulo"
+  hour:string = "Manha"
+  weather:string = "Calor"
+  temp:string = "12";
+  max_temp: string = "32º"
+  min_temp: string = "10º"
+  humidity:string = "67%"
+  wind:string = "12 K/M"
+
+>>>>>>> aaa938e05948011b421de6c6201cc678e1d343e8
   
   // searchedCities: string[] = [Atlanta, Rio de Janeiro, São Paulo, Curitiba, Lisboa, Roma, Londres, Paris, Bogotá -->]
   constructor(private _apiservice: ApiService, private _broadcastSearchService: BroadcastSearchService) { }
@@ -29,6 +45,7 @@ export class WeatherHomeComponent implements OnInit {
         this.callApi(city)
       }
     );
+
   }
 
   // TODO: melhorar para string ou number - union melhor pois api pode mudar formato

@@ -10,6 +10,7 @@ import { WeatherObj } from '../models/weather-obj';
 })
 export class WeatherSearchComponent implements OnInit {
 
+
   constructor(private _broadcastSearchService: BroadcastSearchService) { }
 
   ngOnInit(): void {
@@ -21,5 +22,8 @@ export class WeatherSearchComponent implements OnInit {
     this._broadcastSearchService.broadcastSearch(city);
   }
 
+
 }
+
+
   
