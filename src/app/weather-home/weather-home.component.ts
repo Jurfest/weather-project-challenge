@@ -8,27 +8,26 @@ import { WeatherSearchComponent } from '../weather-search/weather-search.compone
   templateUrl: './weather-home.component.html',
   styleUrls: ['./weather-home.component.css']
 })
-export class WeatherHomeComponent implements OnInit {
+export class WeatherHomeComponent  implements OnInit {
   //@Input('weatherItem') item: WeatherItem;
-  locale:string = "São Paulo"
+
   
+  locale:string = "São Paulo"
   hour:string = "Manha"
-
   weather:string = "Calor"
-
   temp:string = "12";
   max_temp: string = "32º"
   min_temp: string = "10º"
-
   humidity:string = "67%"
-
   wind:string = "12 K/M"
+
 
   //obj = new WeatherObj();
   
-  constructor(private apiservice: ApiService) { }
+ 
 
   ngOnInit(): void {
+   
   }
 
 

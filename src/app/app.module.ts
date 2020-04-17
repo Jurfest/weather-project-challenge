@@ -8,20 +8,22 @@ import { WeatherSearchComponent } from './weather-search/weather-search.componen
 import { ApiService } from './api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DesignAnimationComponent } from './design-animation/design-animation.component';
+import { WeatherObj } from './models/weather-obj';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherHomeComponent,
     WeatherSearchComponent,
-    DesignAnimationComponent
+    DesignAnimationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+   
   ],
-  providers: [ApiService],
+  providers: [ApiService], 
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  }

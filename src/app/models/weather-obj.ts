@@ -1,24 +1,30 @@
+
+
+import { WeatherSearchComponent } from '../weather-search/weather-search.component';
+import { Directive } from '@angular/core';
+
 export class WeatherObj {
   public city_name: string;
-  public temp: number;
-  public wind: number;
+  public temps: number;
+  public winds: number;
   public moisture: number;
   public city_img?: string;
 
-  constructor(city_name: string, temp: number, wind:number, moisture:number, city_img?: string) {
+  constructor(city_name: string, temps: number, winds: number, moisture: number, city_img?: string) {
     this.city_name = city_name;
-    this.temp = temp;
-    this.wind = wind;
+    this.temps = temps;
+    this.winds = winds;
     this.moisture = moisture;
-    if(city_img){
+    if (city_img) {
       this.city_img = city_img;
+
     }
   }
 }
 
 
 // locale:string = "São Paulo"
-  
+
 //   hour:string = "Manha"
 
 //   weather:string = "Calor"

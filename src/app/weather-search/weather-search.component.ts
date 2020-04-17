@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { WeatherObj } from '../models/weather-obj';
 // TODO: separar em outro serviço, pois chamada a api sendo feita somente em 
@@ -11,11 +11,12 @@ import { WeatherObj } from '../models/weather-obj';
 })
 export class WeatherSearchComponent implements OnInit {
 
+
   // searchedCities: string[] = [Atlanta, Rio de Janeiro, São Paulo, Curitiba, Lisboa, Roma, Londres, Paris, Bogotá -->]
   constructor(private apiservice: ApiService) { }
 
 ngOnInit(): void {
-    this.callApi("São Paulo")
+    //this.callApi("São Paulo")
   }
 
   // TODO: melhorar para string ou number - union melhor pois api pode mudar formato
@@ -24,8 +25,11 @@ ngOnInit(): void {
   // humidity: any;
   // locale: any
 
+
   // TODO: melhorar para union
   public weatherSelectData: any[] = [];
+ 
+   public newItem: any;
 
   callApi(city) {
     // this.apiservice.clearWeatherData();
@@ -41,7 +45,7 @@ ngOnInit(): void {
       temp = weatherData.data[0].temp;
       wind = weatherData.data[0].wind_spd;
       humidity = weatherData.data[0].rh;
-      const newItem = new WeatherObj(locale, temp, wind, humidity);
+      this.newItem = new WeatherObj(locale, temp, wind, humidity);
 
       console.log(locale)
       console.log(temp)
@@ -50,8 +54,6 @@ ngOnInit(): void {
   });
   
 }
-
-  
   onAddCity(city){
       console.log(`event: ${event}`);
       this.callApi(city);
