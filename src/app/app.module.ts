@@ -9,6 +9,7 @@ import { ApiService } from './api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DesignAnimationComponent } from './design-animation/design-animation.component';
 import { WeatherObj } from './models/weather-obj';
+import { ForecastWeatherComponent } from './forecast-weather/forecast-weather.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { WeatherObj } from './models/weather-obj';
     WeatherHomeComponent,
     WeatherSearchComponent,
     DesignAnimationComponent,
+    ForecastWeatherComponent,
   ],
   imports: [
     BrowserModule,
