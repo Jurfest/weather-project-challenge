@@ -27,6 +27,14 @@ export class ForecastWeatherComponent implements OnInit {
   }
 
   callApiForecast(city) {
+    this.temp=[]
+    this.city=[]
+    this.hour=[]
+    this.description=[]
+    this.wind=[]
+    this.max_temp=[]
+    this.min_temp=[]
+    this.precip=[]
     this._forecast.getDataForecast(city).subscribe((result) => {
       console.log(result);
       for(let dayData of result.data){
